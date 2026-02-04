@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema CRUD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Cadastro de Usuários</h1>
+    
+    <form method="POST">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+    <h2>Usuários cadastrados</h2>
+    <ul>
+        {% for u in usuarios %}
+        <li>
+            {{ u.nome }} - {{ u.email }}
+            <a href="/editar/{{ u.id }}">✏️ Editar</a>
+            <a href="/deletar/{{ u.id }}">❌ Excluir</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
