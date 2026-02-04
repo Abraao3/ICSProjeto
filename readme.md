@@ -4,7 +4,7 @@ Aplicação web simples usando Flask e SQLite.
 
 ## Funcionalidades
 - Cadastro de usuários
-- Listagem de usuários
+- E O CRUD COMPLETO COM BANCO DE DADOS
 
 ## Como rodar
 
